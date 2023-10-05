@@ -1,0 +1,41 @@
+---
+import NavButton from "./NavButton.svelte";
+
+---
+<!--
+<div class="flex flex-row lg:ml-8 items-center flex-wrap gap-4 p-2 rounded-sm shadow bg-oxford-800">
+    <NavButton title="about" url="/" path={Astro.url.pathname} client:load /> |
+    <NavButton title="projects" path={Astro.url.pathname} client:load /> |
+     <NavButton title="design" path={Astro.url.pathname} client:load /> |
+    <NavButton title="blog" path={Astro.url.pathname} client:load />
+</div> -->
+
+<!-- component -->
+<div class="h-16 w-full bg-black bg-opacity-50 rounded-xl">
+    <div class="w-full h-full flex justify-center items-center rounded-sm">
+        <a href="/" >  <div
+            class="flex h-full items-center  hover:bg-black hover:bg-opacity-50">
+             <div class="mx-4 text-white">Abouts
+            </div>  
+            <div class=" h-8 w-px bg-gray-300"></div>
+        </div> </a>
+        <a href="/projects" >  <div
+            class="flex h-full items-center  hover:bg-black hover:bg-opacity-50">
+             <div class="mx-4 text-white">Projects
+            </div>  
+            <div class=" h-8 w-px bg-gray-300"></div>
+        </div> </a> <a href="/blog" >  <div
+            class="flex h-full items-center  hover:bg-black hover:bg-opacity-50">
+             <div class="mx-4 text-white">Blogs
+            </div>  
+            <div class=" h-8 w-px bg-gray-300"></div>
+        </div> </a>
+
+        <a href="/blog" >  <div
+            class="flex h-full items-center  hover:bg-black hover:bg-opacity-50">
+             <div class="mx-4 text-white">Design
+            </div>  
+            
+        </div> </a>
+    </div>
+</div>

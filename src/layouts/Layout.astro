@@ -1,0 +1,61 @@
+---
+import '@fontsource-variable/montserrat';
+import '@fontsource-variable/literata';
+import '@fontsource/ovo';
+
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="bg-oxford-900 text-alabaster h-full font-montserrat">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon-bg.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <script>
+        import "../../icons-bundle.js";
+      </script>
+    <body class="h-full">
+        <slot />
+    </body>
+</html>
+<style is:global>
+    :root {
+        --accent: 136, 58, 234;
+        --accent-light: 224, 204, 250;
+        --accent-dark: 49, 10, 101;
+        --accent-gradient: linear-gradient(
+            45deg,
+            rgb(var(--accent)),
+            rgb(var(--accent-light)) 30%,
+            white 60%
+        );
+
+        background: rgb(36, 54, 90);
+        background: -moz-linear-gradient(135deg, rgb(129, 161, 224) 25%, rgb(47, 72, 134) 75%);
+        background: -webkit-linear-gradient(135deg, rgb(9, 13, 22) 25%, rgb(28, 45, 85) 75%);
+        background: linear-gradient(135deg, rgb(106, 131, 182) 25%, rgb(20, 37, 77) 75%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0f1624",endColorstr="#0c111d",GradientType=1);
+        background-repeat: no-repeat;
+    	background-attachment: fixed;
+    }
+    code {
+        font-family:
+            Menlo,
+            Monaco,
+            Lucida Console,
+            Liberation Mono,
+            DejaVu Sans Mono,
+            Bitstream Vera Sans Mono,
+            Courier New,
+            monospace;
+    }
+</style>

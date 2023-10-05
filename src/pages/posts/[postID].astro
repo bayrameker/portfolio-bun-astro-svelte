@@ -1,0 +1,28 @@
+---
+import POSTS from '../../data/posts';
+import Layout from '../../layouts/Layout.astro';
+import PostTags from '../../components/PostTags.svelte';
+import PostLinks from '../../components/PostLinks.svelte';
+import ImageGrid from '../../components/ImageGrid.svelte';
+import PostWriteup from '../../components/PostWriteup.svelte';
+
+const { postID } = Astro.params;
+
+const post = POSTS.find((post) => post.id === postID);
+
+---
+<Layout title="fjallnari">
+	<main class="lg:w-2/5 p-4 max-w-[100% - 2rem] m-auto lg:mt-24 h-full">
+        <a href="/projects" class="text-timberwolf hover:text-timberwolf active:text-oxford-300">← Back</a>
+		<div class="flex flex-col gap-2 mt-4">
+            <h1 class="text-alabaster text-2xl">{post?.title}</h1>
+			
+			<PostLinks {post} client:load />
+			<div class="flex flex-row gap-2 mb-4">
+				<PostTags tags={post?.tags} wantBg client:load />
+			</div>
+			<ImageGrid {post} client:load />
+			<PostWriteup {post} client:load />
+		</div>
+	</main>
+</Layout>

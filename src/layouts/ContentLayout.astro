@@ -1,0 +1,16 @@
+---
+import Layout from './Layout.astro';
+import Header from '../components/Header.astro';
+import Navbar from '../components/Navbar.astro';
+
+---
+
+<Layout title="sdev">
+	<main class="lg:w-3/5 p-4 max-w-[100% - 2rem] m-auto lg:mt-24 h-full">
+		<div class="flex flex-col gap-8">
+			<Header />
+			<Navbar />
+			<slot />
+		</div>
+	</main>
+</Layout>

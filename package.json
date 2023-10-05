@@ -1,0 +1,31 @@
+{
+  "name": "receptive-rotation",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/node": "^6.0.0",
+    "@astrojs/svelte": "^4.0.2",
+    "@astrojs/tailwind": "^5.0.0",
+    "@fontsource-variable/literata": "^5.0.13",
+    "@fontsource-variable/montserrat": "^5.0.9",
+    "@fontsource/ovo": "^5.0.8",
+    "astro": "^3.0.12",
+    "svelte": "^4.0.0",
+    "svelte-markdown": "^0.4.0",
+    "tailwindcss": "^3.0.24"
+  },
+  "devDependencies": {
+    "@iconify/svelte": "^3.1.4",
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.0",
+    "prettier-plugin-svelte": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.4"
+  }
+}
